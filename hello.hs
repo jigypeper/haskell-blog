@@ -1,4 +1,6 @@
 main = putStrLn myhtml
+newtype Html = Html String
+newtype Structure = Structure String
 myhtml :: String
 myhtml = 
     makeHtml 
@@ -15,8 +17,8 @@ head_ :: String -> String
 head_ = el "head"
 title_ :: String -> String
 title_ = el "title"
-p_ :: String -> String
-p_ = el "p"
+p_ :: String -> Structure
+p_ = Structure . el "p"
 h1_ :: String -> String
 h1_ = el "h1"
 makeHtml :: String -> String -> String
