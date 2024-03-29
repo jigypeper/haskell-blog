@@ -9,6 +9,10 @@ myhtml =
 el :: String -> String -> String
 el tag content =
     "<" <> tag <> ">" <> content <> "</" <> tag <> ">"
+append_ :: Structure -> Structure -> Structure
+append_ (Structure a) (Structure b) =
+    Structure (a <> b)
+
 html_ :: String -> String
 html_ = el "html"
 body_ :: String -> String
