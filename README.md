@@ -1,0 +1,2 @@
+# Blog in Haskell
+## WIP
